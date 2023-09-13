@@ -38,3 +38,43 @@ body{
     z-index: 4;
     bottom: -17%;
 }
+#image_album{
+    position: absolute;
+    width: 103%;
+    top: -7%;
+    transition: 1s;
+    z-index: 3;
+}
+#play_pause{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    filter: invert(1);
+    cursor: pointer;
+    bottom: 15%;
+    z-index: 4;
+    font-size: 53px;
+    left: 9%;
+    transition: .3s;
+}
+#previous_song, #next_song {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    filter: invert(1);
+    cursor: pointer;
+    bottom: 13.5%;
+    font-size: 40px;
+    z-index: 4;
+    transition: .3s;
+}
+#next_song{
+    right: 10%;
+}
+#previous_song{
+    right: 10.3%;
+    bottom: 21.5%;
+}
+#previous_song:hover, #next_song:hover, #play_pause:hover{
+    filter:sepia(0) hue-rotate(320deg) saturate(2);
+}
