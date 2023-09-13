@@ -76,5 +76,38 @@ body{
     bottom: 21.5%;
 }
 #previous_song:hover, #next_song:hover, #play_pause:hover{
-    filter:sepia(0) hue-rotate(320deg) saturate(2);
+    filter: brightness(0) saturate(100%) invert(87%) sepia(0%) saturate(427%) hue-rotate(172deg) brightness(92%) contrast(95%);
+}
+.name_artist{
+    position: absolute;
+    color:rgb(193, 255, 6);
+    z-index:4;
+    font-family: 'Montserrat', sans-serif;
+    bottom: 21%;
+    left:28%;
+    font-size: 20px;
+    font-weight: bold;
+}
+.title_song{
+    position: absolute;
+    color:white;
+    z-index: 4;
+    font-size:17px ;
+    font-family: 'Montserrat', sans-serif;
+    bottom: 16%;
+    left:28%
+}
+#progress_bar{
+    -webkit-appearance: none;
+    position: absolute;
+    appearance: none;
+    z-index: 4;
+    height: 5px;
+    background-color: #000000;
+    width: 160pt;
+    bottom: 5%;
+    left: 17%
+}
+#progress_bar:focus{
+    outline: none;
 }
