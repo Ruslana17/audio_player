@@ -48,3 +48,11 @@ previousSong.addEventListener('click', ()=>{
         audio.play();
     }
 })
+
+/*audio.addEventListener('ended', () =>{
+    currentSongIndex=(currentSongIndex + 1)% songs.length;
+    loadSong(currentSongIndex);
+    if(!audio.paused){
+        audio.play();
+    }
+})*/
