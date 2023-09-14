@@ -3,7 +3,7 @@ const nextSong = document.getElementById('next_song');
 const previousSong = document.getElementById('previous_song');
 
 const audio =document.getElementById('song');
-const imagePlayuer= document.getElementById('image_album');
+const imagePlayer= document.getElementById('image_album');
 const imageBackground = document.getElementById('backround-image');
 
 const nameArtist = document.getElementsByClassName('name_artist');
@@ -16,7 +16,7 @@ let currentSongIndex=0;
 
 function loadSong(index){
     audio.src=songs[index];
-    imagePlayuer.src=imageAlbum[index];
+    imagePlayer.src=imageAlbum[index];
     imageBackground.src=imageAlbum[index];
 }
 loadSong(currentSongIndex);
@@ -26,11 +26,11 @@ function playPauseFunstion(){
     if(audio.paused){
         audio.play();
         playPause.src="img/pause.png";
-        imagePlayuer.style="transform: scale(1.15)"
+        imagePlayer.style="transform: scale(1.15)"
     } else{
         audio.pause();
         playPause.src="img/play.png";
-        imagePlayuer.style="transform: scale(1)"
+        imagePlayer.style="transform: scale(1)"
     }
 }
 
