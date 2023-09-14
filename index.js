@@ -9,14 +9,11 @@ const imageBackground = document.getElementById('image_album');
 const songs =['songs/beyonce.mp3', 'songs/dontstartnow.mp3'];
 const imageAlbum = ['img/lemonade.png','img/dontstartnow.png'];
 
+let currentSongIndex=0;
+
+function loadSong(index){
+    audio.src=songs[index];
+}
+loadSong(currentSongIndex);
 
 
-
-/*let isPlaying = fasle;
-
-playPause.addEventListener('click', () => {
-    let audio = document.querySelector('audio');
-    audio.forEach((audio) =>{
-    audio.play();
-    })
-})*/
