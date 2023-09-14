@@ -54,10 +54,10 @@ previousSong.addEventListener('click', ()=>{
     }
 })
 
-/*audio.addEventListener('ended', () =>{
+audio.addEventListener('ended', () =>{ /* jeżeli się skończy muzyka  */
     currentSongIndex=(currentSongIndex + 1)% songs.length;
     loadSong(currentSongIndex);
     if(!audio.paused){
         audio.play();
     }
-})*/
+})
