@@ -109,12 +109,20 @@ body{
     width: 160pt;
     bottom: 5%;
     left: 17%;
-    accent-color:rgba(178, 231, 19, 0.893); /*przycisk*/
-    
+    /*accent-color:rgba(178, 231, 19, 0.893); /*przycisk*/
+   
 }
-#progress_bar::-webkit-slider-runnable-track {
-    accent-color:rgba(140, 154, 97, 0.893);
+input[type="range"]::-webkit-slider-thumb {
+    background-color: #53CC16;
+    height: 15px;
+    width: 10px;
+   cursor: pointer;
+   border-radius: 16px;
+   -webkit-appearance: none; /* Remove the default appearance */
+  appearance: none;
 }
+
+
 #progress_bar:focus{
     outline: none;
 }
