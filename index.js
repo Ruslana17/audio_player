@@ -6,6 +6,9 @@ const audio =document.getElementById('song');
 const imagePlayuer= document.getElementById('image_album');
 const imageBackground = document.getElementById('backround-image');
 
+const nameArtist = document.getElementsByClassName('name_artist');
+const titleSong = document.getElementsByClassName('title_song');
+
 const songs =['songs/beyonce.mp3', 'songs/dontstartnow.mp3'];
 const imageAlbum = ['img/lemonade.png','img/dontstartnow.png'];
 
