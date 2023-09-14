@@ -26,9 +26,11 @@ function playPauseFunstion(){
     if(audio.paused){
         audio.play();
         playPause.src="img/pause.png";
+        imagePlayuer.style="transform: scale(1.15)"
     } else{
         audio.pause();
         playPause.src="img/play.png";
+        imagePlayuer.style="transform: scale(1)"
     }
 }
 
