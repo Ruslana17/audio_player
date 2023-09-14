@@ -16,4 +16,16 @@ function loadSong(index){
 }
 loadSong(currentSongIndex);
 
+function playPauseFunstion(){
+    if(audio.paused){
+        audio.play();
+        playPause.src="img/pause.png";
+    } else{
+        audio.pause();
+        playPause.src="img/play.png";
+    }
+}
+
+playPause.addEventListener('click', playPauseFunstion);
+
 
