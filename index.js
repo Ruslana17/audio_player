@@ -44,7 +44,7 @@ function loadSong(index){
     imagePlayer.src= song.image;
     imageBackground.src = song.image;
 
-    nameArtist.innerHtml += song.artist; /*console.log(song.artist)*/
+    nameArtist.textContent= song.artist; /*console.log(song.artist)*/
     titleSong.textContent = song.title;/* console.log(song.title)*/
    /* imagePlayer.src=imageAlbum[index];
     imageBackground.src=imageAlbum[index]; */
