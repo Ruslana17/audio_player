@@ -34,7 +34,6 @@ const listSongs=[
 
 ];
 
-   
 
 let currentSongIndex=0;
 
@@ -85,7 +84,7 @@ previousSong.addEventListener('click', ()=>{
     }
 })
 
- audio.addEventListener('ended', () =>{  /*jeżeli się skończy muzyka*/
+ audio.addEventListener('ended', () =>{  
     currentSongIndex=(currentSongIndex + 1)% listSongs.length;
     loadSong(currentSongIndex);
     if(!audio.paused){
