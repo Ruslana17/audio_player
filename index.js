@@ -9,8 +9,8 @@ const imageBackground = document.getElementById('backround-image');
 const nameArtist = document.getElementById('name_artist'); 
 const titleSong = document.getElementById('title_song');
 
-const currentTime = document.getElementById('current-time');
-const durationTime = document.getElementById('duration-time');
+const currentTimes = document.getElementById('current-time');
+const durationTimes = document.getElementById('duration-time');
 
 /*const songs =['songs/beyonce.mp3', 'songs/dontstartnow.mp3'];
 const imageAlbum = ['img/lemonade.png','img/dontstartnow.png'];*/
@@ -93,3 +93,18 @@ previousSong.addEventListener('click', ()=>{
         audio.play();
     }
 }) 
+
+audio.addEventListener('timeupdate', () => {
+    const currentTime = audio.currentTimes;
+    const duration = audio.durationTime;
+    const minutes = Math.floor(currentTime / 60);
+    const seconds =Math.floor(currentTime % 60);
+    const currentPlaybackTime = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+
+    const totalMinutes= Math.floor(duration / 60);
+    const totalSeconds = Math.floor(duration % 60);
+    const totalPlaybackTime = `${totalMinutes}:${totalSeconds < 10 ? '0' : ''}${totalSeconds}`;
+
+    currentTimes.textContent = currentPlaybackTime;
+    durationTimes.textContent = totalPlaybackTime;
+})
