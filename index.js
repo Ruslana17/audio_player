@@ -9,15 +9,47 @@ const imageBackground = document.getElementById('backround-image');
 const nameArtist = document.getElementsByClassName('name_artist');
 const titleSong = document.getElementsByClassName('title_song');
 
-const songs =['songs/beyonce.mp3', 'songs/dontstartnow.mp3'];
-const imageAlbum = ['img/lemonade.png','img/dontstartnow.png'];
+/*const songs =['songs/beyonce.mp3', 'songs/dontstartnow.mp3'];
+const imageAlbum = ['img/lemonade.png','img/dontstartnow.png'];*/
+
+
+
+
+ 
+  
+
+const listSongs=[
+    {
+    artist: 'Beyonce',
+    title: "Don't Hurt Yourself", 
+    file:  "songs/beyonce.mp3",
+    image: "img/lemonade.png",
+  },
+
+{ 
+    artist: 'Dua Lipa',
+    title: "Don't Start Now",
+    file: "songs/dontstartnow.mp3",
+    image: "img/dontstartnow.png",
+    },
+
+];
+
+   
 
 let currentSongIndex=0;
 
 function loadSong(index){
-    audio.src=songs[index];
-    imagePlayer.src=imageAlbum[index];
-    imageBackground.src=imageAlbum[index];
+    const song = listSongs[index]
+    audio.src = song.file;
+    imagePlayer.src= song.image;
+    imageBackground.src = song.image;
+
+    nameArtist.textContent = song.artist;
+    titleSong.textContent= song.title;
+   /* imagePlayer.src=imageAlbum[index];
+    imageBackground.src=imageAlbum[index]; */
+    
 }
 loadSong(currentSongIndex);
 
@@ -38,7 +70,7 @@ playPause.addEventListener('click', playPauseFunstion);
 
 
 nextSong.addEventListener('click', () =>{
-    currentSongIndex=(currentSongIndex + 1) % songs.length;
+    currentSongIndex=(currentSongIndex + 1) % listSongs.length;
     loadSong(currentSongIndex);
     if(!audio.paused){
         audio.play();
@@ -47,7 +79,7 @@ nextSong.addEventListener('click', () =>{
 
 
 previousSong.addEventListener('click', ()=>{
-    currentSongIndex=(currentSongIndex - 1 + songs.length) % songs.length;
+    currentSongIndex=(currentSongIndex - 1 + listSongs.length) % listSongs.length;
     loadSong(currentSongIndex);
     if(!audio.paused){
         audio.play();
