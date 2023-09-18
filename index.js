@@ -9,6 +9,8 @@ const imageBackground = document.getElementById('backround-image');
 const nameArtist = document.getElementById('name_artist'); 
 const titleSong = document.getElementById('title_song');
 
+const currentTime = document.getElementById('current-time');
+const durationTime = document.getElementById('duration-time');
 
 /*const songs =['songs/beyonce.mp3', 'songs/dontstartnow.mp3'];
 const imageAlbum = ['img/lemonade.png','img/dontstartnow.png'];*/
