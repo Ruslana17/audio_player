@@ -6,10 +6,9 @@ const audio =document.getElementById('song');
 const imagePlayer= document.getElementById('image_album');
 const imageBackground = document.getElementById('backround-image');
 
-const nameArtist = document.getElementsByClassName('name_artist'); 
-const titleSong = document.getElementsByClassName('title_song');
-console.log(nameArtist)
-console.log(titleSong)
+const nameArtist = document.getElementById('name_artist'); 
+const titleSong = document.getElementById('title_song');
+
 
 /*const songs =['songs/beyonce.mp3', 'songs/dontstartnow.mp3'];
 const imageAlbum = ['img/lemonade.png','img/dontstartnow.png'];*/
@@ -45,8 +44,8 @@ function loadSong(index){
     imagePlayer.src= song.image;
     imageBackground.src = song.image;
 
-    nameArtist.innerHtml = song.artist; /*console.log(song.artist)*/
-    titleSong.textContent= song.title; /*console.log(song.title)*/
+    nameArtist.innerHtml += song.artist; /*console.log(song.artist)*/
+    titleSong.textContent = song.title;/* console.log(song.title)*/
    /* imagePlayer.src=imageAlbum[index];
     imageBackground.src=imageAlbum[index]; */
     
@@ -86,10 +85,10 @@ previousSong.addEventListener('click', ()=>{
     }
 })
 
- /*audio.addEventListener('ended', () =>{  /*jeżeli się skończy muzyka
-    currentSongIndex=(currentSongIndex + 1)% songs.length;
+ audio.addEventListener('ended', () =>{  /*jeżeli się skończy muzyka*/
+    currentSongIndex=(currentSongIndex + 1)% listSongs.length;
     loadSong(currentSongIndex);
     if(!audio.paused){
         audio.play();
     }
-}) */
+}) 
