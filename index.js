@@ -112,11 +112,12 @@ audio.addEventListener('timeupdate', () => {
     durationTime.textContent = totalPlaybackTime;
 
 /* progress slider */
-progressSlider.value = 0;
-    progressSlider.value = (currentTime / duration) *100;
+
+  /*progressSlider.value = (currentTime / duration) *1000;*/
+  progressSlider.value = currentTime;
 })
 
-progressSlider.addEventListener('input',() =>{
-    const seekTime =(progressSlider.value / 100) * audio.duration;
+/*progressSlider.addEventListener('input',() =>{
+    const seekTime = (progressSlider.value / 100) * audio.duration;
     audio.currentTime = seekTime;
-})
+})*/

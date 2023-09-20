@@ -120,10 +120,11 @@ body{
     -webkit-appearance: none; 
     appearance: none;
     border: none;
-   
 }
 
-
+/*#progress_bar::-webkit-slider-runnable-track{
+    background-color: rgba(193, 255, 6, 0.742);
+}*/
 /*input[type="range"] ::-webkit-slider-runnable-track{
     background-color: rgba(193, 255, 6, 0.742);
 }*/
