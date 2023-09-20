@@ -12,6 +12,8 @@ const titleSong = document.getElementById('title_song');
 const currentTimes = document.getElementById('current-time');
 const durationTime = document.getElementById('duration-time');
 
+
+const progressSlider=document.getElementById('progress_bar');
 /*const songs =['songs/beyonce.mp3', 'songs/dontstartnow.mp3'];
 const imageAlbum = ['img/lemonade.png','img/dontstartnow.png'];*/
 
@@ -94,6 +96,7 @@ previousSong.addEventListener('click', ()=>{
     }
 }) 
 
+
 audio.addEventListener('timeupdate', () => {
     const currentTime = audio.currentTime;
     const duration = audio.duration;
@@ -107,4 +110,13 @@ audio.addEventListener('timeupdate', () => {
 
     currentTimes.textContent = currentPlaybackTime;
     durationTime.textContent = totalPlaybackTime;
+
+/* progress slider */
+progressSlider.value = 0;
+    progressSlider.value = (currentTime / duration) *100;
+})
+
+progressSlider.addEventListener('input',() =>{
+    const seekTime =(progressSlider.value / 100) * audio.duration;
+    audio.currentTime = seekTime;
 })

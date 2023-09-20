@@ -105,21 +105,27 @@ body{
     appearance: none;
     z-index: 4;
     height: 5px;
-    background-color: #000000;
+   background-color: #000000;
     width: 160pt;
     bottom: 5%;
     left: 17%;
+    accent-color:rgb(193, 255, 6);
 }
-input[type="range"]::-webkit-slider-thumb { /*przycisk*/
+ #progress_bar::-webkit-slider-thumb{  /*przycisk*/
     background-color: rgb(193, 255, 6);
     height: 9.5px;
     width: 7px;
-   cursor: pointer;
-   border-radius: 16px;
-   -webkit-appearance: none; 
-  appearance: none;
-  border: none;
+    cursor: pointer;
+    border-radius: 16px;
+    -webkit-appearance: none; 
+    appearance: none;
+    border: none;
+   
 }
+/*input[type="range"]::-webkit-slider-runnable-track{
+background-color:rgb(30, 30, 29);
+}*/
+
 
 #progress_bar:focus{
     outline: none;
@@ -149,7 +155,6 @@ input[type="range"]::-webkit-slider-thumb { /*przycisk*/
     font-family: 'Montserrat', sans-serif;
     font-size: 12.5px;
 }
-
 
 
 #name_artist, #title_song{
