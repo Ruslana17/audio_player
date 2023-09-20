@@ -105,7 +105,7 @@ body{
     appearance: none;
     z-index: 4;
     height: 5px;
-   background-color: #000000;
+    background-color: #000000;
     width: 160pt;
     bottom: 5%;
     left: 17%;
@@ -125,10 +125,6 @@ body{
 /*#progress_bar::-webkit-slider-runnable-track{
     background-color: rgba(193, 255, 6, 0.742);
 }*/
-/*input[type="range"] ::-webkit-slider-runnable-track{
-    background-color: rgba(193, 255, 6, 0.742);
-}*/
-
 
 
 #progress_bar:focus{
